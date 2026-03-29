@@ -1,0 +1,54 @@
+---
+Author: {{user}}
+Email: {{user@example.com}}
+Description: 'A daily log to capture work, tasks, and notes.'
+Created: {{date}}
+tags:
+  - log
+  - work
+---
+
+## Focus
+
+mode: active
+focus: 
+initiative: 
+
+---
+
+## TODO
+
+- [ ] ...
+
+---
+
+### Deferred
+
+- [ ] {entry}
+  - status: {deferred|delayed}
+  - reason: {brief explanation}
+  - asOf: {YYYYMMDD}
+
+## Notes
+
+
+
+## Log
+
+### What I did
+
+- 
+- 
+- 
+
+### What's next
+
+- 
+- 
+- 
+
+### What broke or got weird
+
+- 
+- 
+- 
