@@ -4,7 +4,7 @@ A second-brain template repo built on the [agentic kernel](https://github.com/el
 
 ## What it is
 
-This repo provides a pre-configured agentic kernel for personal and work documentation: daily and monthly logs, initiative tracking, planning structures, and end-of-period summaries. Agents handle the repetitive parts (carryover, formatting, scaffolding) so you can focus on capturing what matters.
+This repo provides a pre-configured agentic kernel for personal and work documentation: daily work logs, configurable personal logs, initiative tracking, planning structures, and end-of-period summaries. Agents handle the repetitive parts (carryover, formatting, scaffolding) so you can focus on capturing what matters.
 
 It is not a notes app. It is a structured, agent-assisted writing environment that lives in a git repo.
 
@@ -13,11 +13,13 @@ It is not a notes app. It is a structured, agent-assisted writing environment th
 | Agent | Does what |
 |---|---|
 | `work` | Creates daily work logs, carries over tasks, writes summaries, scaffolds initiatives |
-| `personal` | Creates monthly personal logs, carries over tasks, writes summaries, sets up new years |
+| `personal` | Creates personal logs on a configurable daily or monthly cadence, carries over tasks, writes summaries, sets up new years |
 | `kernel` | Answers questions about the system, governs changes to it |
 | `agent-foundry` | Designs and scaffolds new agents when you want to extend the system |
 
 ## Workflows
+
+The personal agent defaults to `monthly`. Set `settings.cadence` on the `personal` agent entry in `.agentic/manifest.yml` to `daily` if you want personal logs to use `YYYYMMDD.md` files instead.
 
 | Workflow | Invocation | Does what |
 |---|---|---|

@@ -38,8 +38,10 @@ agents:
     description: Designs and scaffolds new agents. Produces a complete, registered agent directory from requirements.
     path: .agentic/agents/agent-foundry
   - name: personal
-    description: Personal documentation assistant. Creates and maintains monthly logs, generates end-of-month summaries, and sets up new year planning structures.
+    description: Personal documentation assistant. Creates and maintains personal logs on a configurable daily or monthly cadence, generates end-of-period summaries, and sets up new year planning structures.
     path: .agentic/agents/personal
+    settings:
+      cadence: monthly
   - name: work
     description: Work documentation assistant. Creates and maintains daily logs, generates end-of-day summaries, and scaffolds new initiative directories.
     path: .agentic/agents/work

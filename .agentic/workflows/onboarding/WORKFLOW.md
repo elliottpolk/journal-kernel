@@ -89,7 +89,7 @@ Here is what you have:
 | Agent | What it does |
 |---|---|
 | work | Start a daily work log, carry over tasks, summarize your day |
-| personal | Start a monthly personal log, carry over tasks, summarize your month |
+| personal | Start a personal log, carry over tasks, summarize your current period |
 | kernel | Ask about the system, make changes to it, extend it |
 | agent-foundry | Design and scaffold new agents |
 
@@ -105,10 +105,10 @@ Here is what you have:
 **Where things live:**
 
 - work/{YYYY}/ -- daily work logs
-- personal/{YYYY}/ -- monthly personal logs
+- personal/{YYYY}/ -- personal logs, monthly by default
 - .agentic/ -- the kernel: agents, workflows, skills, memory
 
-**Suggested next step:** Ask the work agent to start today's log, or ask personal to start this month's.
+**Suggested next step:** Ask the work agent to start today's log, or ask personal to start your current personal log.
 
 ---
 
