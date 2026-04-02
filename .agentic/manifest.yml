@@ -43,6 +43,9 @@ agents:
   - name: work
     description: Work documentation assistant. Creates and maintains daily logs, generates end-of-day summaries, and scaffolds new initiative directories.
     path: .agentic/agents/work
+  - name: scribe
+    description: Adaptive long-form writing agent that drafts, reshapes, and polishes prose for human readers. Use for blog posts, essays, research notes, analysis docs, initiative write-ups, and narrative summaries.
+    path: .agentic/agents/scribe
 
 workflows:
   - name: onboarding
