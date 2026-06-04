@@ -5,16 +5,19 @@ Description: {{description}}
 Created: {{date}}
 tags:
   - work
-  - assumptions
+  - research
+  - topic
   - {{topic}}
 ---
 
 # Topic
 
-## Goal
+## Problem Space
 
-## My Assumptions
+## Assumptions
 
-## Stakeholders
+## Solution Hypothesis
 
-## Findings
+## Expected Outcomes
+
+## Conclusions

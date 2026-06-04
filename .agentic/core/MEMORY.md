@@ -83,6 +83,78 @@ State files reflect **current reality only**. When reality changes:
 
 Agent-specific memory (`.agentic/agents/{name}/memories/`) is for how that agent has been shaped over time: corrections, confirmed preferences, agent-scoped patterns. It is not for domain facts that any agent would need. See BEHAVIOR.md for the decision rule.
 
+## Pattern Signals
+
+A pattern signal is a lightweight agent-specific memory that captures a reusable shape the agent may need to recognize again later.
+
+The key property is the pattern, not the topic. A pattern signal records structure, flow, pairing, framing, or another repeatable form that may recur across future work.
+
+Pattern signals have a lifecycle:
+
+- `candidate`: an initial signal worth watching
+- `corroborated`: later work shows meaningful structural overlap with the candidate
+- `promotable`: repeated overlap is now strong enough that a reusable template, workflow, or other formalization may be justified
+
+### What to capture
+
+When capturing a pattern signal:
+
+- Write it to the relevant agent's `memories/` directory, not shared state, unless the pattern is truly useful to multiple agents.
+- Keep it short. Capture only the minimum needed to recover the pattern later.
+- Record what the agent should recognize, what aspect matters, and one or more anchor examples.
+- Prefer naming the structural cue over naming the current subject matter.
+- Capture the pattern as a `candidate` first, not as an established reusable method.
+- A user-declared candidate pattern is sufficient reason to capture the memory, even if recurrence is not yet proven.
+- When the user is the source of the signal, preserve that provenance briefly.
+- Do not turn the memory into instructions, a workflow, or a policy unless the pattern has already proven stable.
+
+### How a candidate becomes a pattern
+
+Agents should watch for corroborating instances during normal work. The important question is not whether the next artifact has the same content. The question is whether the same underlying framing sequence, structure, or flow is showing up again.
+
+Outputs may vary by topic, depth, or final artifact shape. Structural overlap is what matters.
+
+### How to recognize a possible pattern
+
+Agents should check for pattern-signal matches during normal work at natural checkpoints, for example when routing, framing, summarizing, or shaping a new artifact.
+
+Do not run broad memory scans just to hunt for patterns. Recognition should happen opportunistically when the current work already resembles something stored in agent-specific memory.
+
+When evaluating a possible match:
+
+- Compare the current work against the stored structural cue, not only the topic.
+- Treat one later overlap as corroboration, not as proof that a reusable method exists.
+- Look for multiple instances of similar overlap before recommending extraction into a template or workflow.
+
+### How to surface a recognized pattern
+
+When a current thread appears to match a stored pattern signal:
+
+- Surface it to the user as a possibility, not a fact.
+- Name the remembered pattern briefly and explain the match in terms of structure or flow.
+- Reference the anchor example when that would help the user evaluate the match quickly.
+- Treat the memory as a nudge toward recognition, not an automatic decision to restructure the work.
+
+When the pattern has moved beyond a single corroborating instance:
+
+- Say that repeated structural overlap may now indicate an emerging reusable method.
+- Call out that the next step may be to extract a template, workflow, or other formal support.
+- Keep the recommendation proportional to the evidence. Suggest promotion only when the overlap appears stable enough to justify it.
+
+### Threshold for surfacing
+
+Use a conservative threshold to avoid false positives:
+
+- `capture threshold`: low. A credible structural cue or explicit user declaration is enough to store a candidate pattern.
+- `recognition threshold`: medium. Require meaningful structural overlap before mentioning a possible match.
+- `promotion threshold`: high. Do not recommend a template or workflow from a single example or two closely related artifacts in the same thread.
+- Do not surface a pattern based on topical similarity alone.
+- Require a clear structural match to the stored pattern.
+- Prefer at least one concrete anchor example in memory before treating the pattern as reusable.
+- Prefer at least three structurally similar instances, or equivalent confidence across independent examples, before recommending formalization into a template or workflow.
+- If the resemblance is weak, stay silent.
+- Prefer missing a weak pattern over interrupting the user with a noisy one.
+
 ## Anti-Patterns
 
 - **Writing futures as facts**: Do not write "will" or "plans to" as settled state. Use "as of {date}: pending" or record it in history.

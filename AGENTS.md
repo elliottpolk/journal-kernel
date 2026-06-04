@@ -1,6 +1,6 @@
 ---
 title: Journal Kernel
-version: "1.1"
+version: "1.2"
 description: >
   The session kernel for journal-kernel: a stateful, multi-agent personal journal
   and knowledge management system. Bootstraps agent memory, loads behavioral rules,

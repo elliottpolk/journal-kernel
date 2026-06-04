@@ -8,7 +8,7 @@ version: "1.0"
 # Kernel identity: paired to AGENTS.md frontmatter. Do not modify.
 kernel:
   title: Journal Kernel
-  version: "1.1"
+  version: "1.2"
   source: AGENTS.md
   repository: https://github.com/elliottpolk/journal-kernel
   organization: The Karoshi Workshop
@@ -43,7 +43,7 @@ agents:
     settings:
       cadence: monthly
   - name: work
-    description: Work documentation assistant. Creates and maintains daily logs, generates end-of-day summaries, and scaffolds new initiative directories.
+    description: Work documentation assistant. Creates and maintains daily logs, generates end-of-day summaries, routes work across year-level lanes, and scaffolds work structures.
     path: .agentic/agents/work
   - name: scribe
     description: Adaptive long-form writing agent that drafts, reshapes, and polishes prose for human readers. Use for blog posts, essays, research notes, analysis docs, initiative write-ups, and narrative summaries.
@@ -64,6 +64,15 @@ workflows:
   - name: consolidate-work-month
     description: Consolidate all daily work log entries from the previous month into the monthly subdirectory. Moves YYYYMMDD.md files from work/{YYYY}/ into work/{YYYY}/{MM}/.
     path: .agentic/workflows/consolidate-work-month
+  - name: em-dash-check
+    description: Fast Unicode dash audit for prose files. Scans a target file or directory for em dash and en dash characters, rewrites affected prose without dash substitution, and reruns the check to confirm cleanup.
+    path: .agentic/workflows/em-dash-check
+  - name: riff
+    description: Discussion-first ideation mode. Preserves the current agent context, explores ideas without planning or execution pressure, and defers edits until the user explicitly asks to capture something.
+    path: .agentic/workflows/riff
+  - name: should-check
+    description: Finds vague uses of "should" in prose, rewrites them using the NEED/WANT/MAY decision model, and reruns the scan to confirm cleanup.
+    path: .agentic/workflows/should-check
 
 skills:
   - name: copilot-bridge
