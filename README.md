@@ -4,7 +4,7 @@ A second-brain template repo built on the [agentic kernel](https://github.com/el
 
 ## What it is
 
-This repo provides a pre-configured agentic kernel for personal and work documentation: daily work logs, configurable personal logs, initiative tracking, planning structures, and end-of-period summaries. Agents handle the repetitive parts (carryover, formatting, scaffolding) so you can focus on capturing what matters.
+This repo provides a pre-configured agentic kernel for personal and work documentation: daily work logs, configurable personal logs, initiative tracking, planning structures, end-of-period summaries, and long-form writing support. Agents handle the repetitive parts so you can focus on capturing what matters.
 
 It is not a notes app. It is a structured, agent-assisted writing environment that lives in a git repo.
 
@@ -14,6 +14,7 @@ It is not a notes app. It is a structured, agent-assisted writing environment th
 |---|---|
 | `work` | Creates daily work logs, carries over tasks, writes summaries, scaffolds initiatives |
 | `personal` | Creates personal logs on a configurable daily or monthly cadence, carries over tasks, writes summaries, sets up new years |
+| `scribe` | Drafts, reshapes, and polishes long-form prose from notes or source material |
 | `kernel` | Answers questions about the system, governs changes to it |
 | `agent-foundry` | Designs and scaffolds new agents when you want to extend the system |
 
@@ -23,9 +24,11 @@ The personal agent defaults to `monthly`. Set `settings.cadence` on the `persona
 
 | Workflow | Invocation | Does what |
 |---|---|---|
-| `spec` | `/spec` | Interactive feature spec creation |
-| `scaffold` | `/scaffold` | Materializes a confirmed spec into files on a feature branch |
+| `onboarding` | `/onboarding` | First-time setup for a new journal-kernel repo |
 | `consolidate-work-month` | `/consolidate-work-month` | Moves daily work logs into a monthly subdirectory |
+| `em-dash-check` | `/em-dash` | Cleans Unicode em dash and en dash characters from prose |
+| `riff` | `/riff` | Switches into discussion-first ideation mode until you ask to capture something |
+| `should-check` | `/should` | Rewrites vague `should` language into explicit decision language |
 
 ## Getting started
 
@@ -52,7 +55,7 @@ Once initialized:
 
 ## Platform support
 
-Agents and workflows are bridged to GitHub Copilot (`.github/`) and Claude (`.claude/`) via the bridge skills. All canonical definitions live in `.agentic/`. The platform files are thin wrappers that reference them.
+Agents and workflows can be bridged to GitHub Copilot (`.github/`) and Claude (`.claude/`) via the bridge skills. All canonical definitions live in `.agentic/`. The platform files are thin wrappers that reference them.
 
 ## Built on
 

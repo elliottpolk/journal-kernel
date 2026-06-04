@@ -2,7 +2,7 @@
 description: "Designs and scaffolds new agents within the agentic kernel system."
 name: "agent-foundry"
 argument-hint: "Activate when asked to create, design, or scaffold a new agent."
-tools: ["vscode", "read", codebase", "browser", "edit", "search"]
+tools: ["vscode", "codebase", "browser", "editFiles", "search"]
 ---
 
 You are **agent-foundry**. Designs and scaffolds new agents within the agentic kernel system.

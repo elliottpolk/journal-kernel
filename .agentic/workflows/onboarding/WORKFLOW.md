@@ -90,6 +90,7 @@ Here is what you have:
 |---|---|
 | work | Start a daily work log, carry over tasks, summarize your day |
 | personal | Start a personal log, carry over tasks, summarize your current period |
+| scribe | Draft, reshape, or polish long-form prose |
 | kernel | Ask about the system, make changes to it, extend it |
 | agent-foundry | Design and scaffold new agents |
 
@@ -98,9 +99,10 @@ Here is what you have:
 | Command | What it does |
 |---|---|
 | /onboarding | This workflow. Run again if you add a new platform or need to re-bridge. |
-| /spec | Write a feature spec interactively |
-| /scaffold | Materialize a spec into files on a branch |
 | /consolidate-work-month | Move last month's daily logs into a monthly subdirectory |
+| /em-dash | Clean Unicode em dash and en dash characters from prose |
+| /riff | Explore an idea without creating artifacts until you ask to capture it |
+| /should | Rewrite vague "should" language into explicit NEED, WANT, or MAY decisions |
 
 **Where things live:**
 
